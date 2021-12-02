@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ResultCard } from "./ResultCard";
 const axios = require("axios").default;
 
 
@@ -29,7 +30,7 @@ export const Add = () => {
     };
     
 
-    
+
   return (
     <div className="add-page">
       <div className="container">
@@ -50,7 +51,12 @@ export const Add = () => {
             <ul className ="results">
             {results.map(movie => (
 
-              <li>{movie.title}</li>
+                    //Varje id är uniq därav movie.id som key
+              //Som prop skickar jag in hela movie objektet till ResultCard.
+              <li key={movie.id}>
+                <ResultCard movie={movie}/>
+              </li>
+
 
             ))}
             </ul>

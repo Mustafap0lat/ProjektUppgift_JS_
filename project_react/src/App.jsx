@@ -3,11 +3,13 @@ import  {Header} from "./Components/Header";
 import  {Watchlist} from "./Components/Watchlist";
 import  {Watched} from "./Components/Watched";
 import  {Add} from "./Components/Add";
+import { GlobalProvider } from "./Components/context/GlobalState";
 import "./App.css";
 import "./lib/font-awesome/css/all.min.css";
 
 function App() {
   return (
+    <GlobalProvider>
     <Router>
       <Header />
 
@@ -26,6 +28,7 @@ function App() {
       
       </Switch>
     </Router>
+    </GlobalProvider>
   );
 }
 
