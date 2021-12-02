@@ -5,11 +5,18 @@ import { GlobalContext } from "./context/GlobalState";
 //movie var är namnet på vår map och innehåller all info från result, alltså apiet.
 export const ResultCard = ({ movie }) => {
   //Kan på detta sätt använda min global och knyta den till button.
-  const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
+  const { addMovieToWatchlist,addMovieToWatched, watchlist, watched } = useContext(GlobalContext);
 
-  let storedMovie = watchlist.find(o => o.id === movie.id);
+  let storedMovie = watchlist.find((o) => o.id === movie.id);
+  let storedMovieWatched = watched.find((o) => o.id === movie.id);
 
-  const watchlistDisabled = storedMovie ? true : false;
+  const watchlistDisabled = storedMovie
+    ? true
+    : storedMovieWatched
+    ? true
+    : false;
+
+    const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
     <div className="result-card">
@@ -35,10 +42,20 @@ export const ResultCard = ({ movie }) => {
         </div>
 
         <div className="controls">
-          <button className="btn"
-          disabled ={watchlistDisabled}
-          onClick={() => addMovieToWatchlist(movie)}>
+          <button
+            className="btn"
+            disabled={watchlistDisabled}
+            onClick={() => addMovieToWatchlist(movie)}
+          >
             Add to Watchlist
+          </button>
+
+          <button
+            className="btn"
+            disabled={watchedDisabled}
+            onClick={() => addMovieToWatched(movie)}
+          >
+            Add to Watched
           </button>
         </div>
       </div>
