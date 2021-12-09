@@ -5,7 +5,7 @@ import { GlobalContext } from "./context/GlobalState";
 //movie var är namnet på vår map och innehåller all info från result, alltså apiet.
 export const ResultCard = ({ movie }) => {
   //Kan på detta sätt använda min global och knyta den till button.
-  const { addMovieToWatchlist,addMovieToWatched, watchlist, watched } = useContext(GlobalContext);
+  const { addMovieToWatchlist, addMovieToWatched, watchlist, watched } = useContext(GlobalContext);
 
   let storedMovie = watchlist.find((o) => o.id === movie.id);
   let storedMovieWatched = watched.find((o) => o.id === movie.id);
@@ -22,11 +22,14 @@ export const ResultCard = ({ movie }) => {
     <div className="result-card">
       <div className="poster-wrapper">
         {movie.poster_path ? ( //eftersom jag skickar in hela movie objetet som props så kan movie.poster_path nås.
-          <img
+      
+           
+             <img 
             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
             //alt för att den ska returna filmens titel.
             alt={`${movie.title} Poster`}
-          />
+            />
+           
         ) : (
           //Finns det ingen poster så returnas det en blank ruta.
           <div className="filler-poster"></div>

@@ -13,7 +13,14 @@ const initialState = {
   watched: localStorage.getItem("watched")
     ? JSON.parse(localStorage.getItem("watched"))
     : [],
+
+
 };
+
+// if(localStorage.getItem("watched") && localStorage.getItem("watchlist") > 10 ){
+//   alert("hej")
+
+// }
 
 //Create context
 
@@ -25,8 +32,8 @@ export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   //useEffect blir triggad när vår state ändras, tex när vi lägger till en film.
-  //När den blir triggar så sparar vi det i local storage
-  //local storage tar stringm därav konverterar jag arrayn med JSON.stringfy
+  //När den blir triggad så sparas det i local storage
+  //local storage tar string därav konverterar jag arrayn med JSON.stringfy
   useEffect(() => {
     localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
     localStorage.setItem("watched", JSON.stringify(state.watched));

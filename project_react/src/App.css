@@ -1,15 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 :root {
-  --primary: #032541;
+  --primary: #4d3b81;
   --secondary: #21d07a;
   --white: #fff;
+}
+
+
+
+
+html{
+
+  background: linear-gradient(to left,rgb(5, 6, 49), #4d3b81);
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0;
   margin: 0;
+  
+ 
 }
 
 .container {
@@ -17,6 +27,8 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+ 
+
 }
 
 @media (min-width: 768px) {
@@ -45,8 +57,7 @@ body {
 
 .btn {
   padding: 10px 15px;
-  background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--white);
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -117,7 +128,7 @@ header .nav-links li:last-child {
   margin-right: 0;
 }
 
-/* Add Page */
+
 .add-content {
   padding: 50px 0;
   max-width: 600px;
@@ -126,7 +137,7 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input {
   width: 100%;
-  background-color: var(--primary);
+  background-color:rgb(62, 75, 70);
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -187,6 +198,7 @@ header .nav-links li:last-child {
 /* Movie Page */
 .movie-page {
   padding: 30px 0;
+  background-color: rgb(6, 7, 53);
 }
 
 .movie-page .header {
@@ -288,4 +300,48 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+.li-style {
+  padding-right: 10px;
+}
+
+.ul-list {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  box-sizing: border-box;
+  border: 2px black;
+  border-color: black;
+  height: fit-content;
+}
+
+.pointer:hover {
+  list-style: none;
+  box-sizing: border-box;
+  border: 1px transparent;
+
+  cursor: pointer;
+  background-color: chartreuse;
+  height: fit-content;
+  width: fit-content;
+}
+
+.header-adjustment{
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.margin-right{
+margin-right: 10px;
+
+}
+
+.back-color{
+background-color: rgb(5, 6, 49);
+
 }

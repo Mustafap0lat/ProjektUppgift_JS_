@@ -32,13 +32,13 @@ export const Add = () => {
 
 
   return (
-    <div className="add-page">
+    <div className="back-color">
       <div className="container">
         <div className="add-content">
           <div className="input-wrapper">
             <input
               type="text"
-              placeholder="Search for a movie"
+              placeholder="Search for a movie" 
               //Sätter initial value till den tomma strängen vi deklarerat där uppe
               value={query}
               onChange={onChange}
@@ -62,8 +62,9 @@ export const Add = () => {
             </ul>
           )}
 
-        </div>
+        
       </div>
+    </div>
     </div>
   );
 };

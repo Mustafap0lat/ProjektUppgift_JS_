@@ -5,14 +5,17 @@ import { MovieCard } from './MovieCard'
 
 export const Watched = () => {
     const{watched} = useContext(GlobalContext);
+    if (watched.length > 10){
+      <link href="/pricing" />
+    }
     return (
         <div className="movie-page">
         <div className="container">
           <div className="header">
             <h1 className="heading">Watched Movies</h1>
-            <span className ="count-pill">
+            <div className ="count-pill">
          {watched.length} {watched.length === 1 ? "Movie" : "Movies" }
-       </span>
+       </div>
           
           </div>
   

@@ -1,0 +1,64 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero-img {
+  display: flex;
+  height: 94vh;
+  width: 100%;
+  align-items: center;
+  background-image: url("../onstart/heroimg.jpg");
+  opacity: 2.9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  flex-direction: column;
+}
+
+.startup-box {
+  box-sizing: border-box;
+  border-radius: 1px;
+  border: 0px solid;
+  border-color: rgb(248, 248, 248);
+  padding: 10px;
+  justify-items: center;
+
+  align-items: center;
+}
+
+.margin {
+    margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 1rem;
+  font-size: 5rem;
+  
+}
+
+
+
+
+.change-content:after{
+content: '';
+animation: changetext 24s infinite linear; 
+text-transform: uppercase;
+font-size: 1.8rem;
+color: rgb(56, 255, 179);
+
+}
+
+@keyframes changetext{
+0% { content: "Browse between thousands of movies"; }
+20% { content: "Keep track of your Movies"; }
+40% { content: "Add them to your Watchlist"; }
+60% { content: "Add them to your Watched"; }
+80% { content: "Or move them in between"; }
+100% { content: "So you'll never forget again."; }
+
+
+
+}
