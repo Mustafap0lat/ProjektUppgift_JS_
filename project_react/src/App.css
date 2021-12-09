@@ -1,18 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 :root {
-  --primary: #4d3b81;
+  --primary: #6750ad;
   --secondary: #21d07a;
   --white: #fff;
 }
 
 
 
-
-html{
-
-  background: linear-gradient(to left,rgb(5, 6, 49), #4d3b81);
-}
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -57,7 +52,7 @@ body {
 
 .btn {
   padding: 10px 15px;
-  color: var(--white);
+  color: rgb(255, 174, 0);
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -69,7 +64,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color:  rgb(56, 255, 179);
   opacity: 1;
   cursor: pointer;
 }
@@ -197,9 +192,12 @@ header .nav-links li:last-child {
 
 /* Movie Page */
 .movie-page {
+  width: 100%;
   padding: 30px 0;
-  background-color: rgb(6, 7, 53);
+  background:linear-gradient(to bottom,  #421f83,#28104e);
+ 
 }
+
 
 .movie-page .header {
   display: flex;
@@ -219,7 +217,7 @@ header .nav-links li:last-child {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: white;
   margin: 0;
 }
 
@@ -342,6 +340,6 @@ margin-right: 10px;
 }
 
 .back-color{
-background-color: rgb(5, 6, 49);
+background-color: rgb(14, 15, 75);
 
 }

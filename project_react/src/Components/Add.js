@@ -32,7 +32,7 @@ export const Add = () => {
 
 
   return (
-    <div className="back-color">
+   
       <div className="container">
         <div className="add-content">
           <div className="input-wrapper">
@@ -65,6 +65,6 @@ export const Add = () => {
         
       </div>
     </div>
-    </div>
+   
   );
 };
