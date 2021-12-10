@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  min-height: 100%;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-img {
   display: flex;
   height: 94vh;
@@ -46,7 +58,11 @@
 
 .margin-content{
   margin-top: 13rem;
+}
 
+.margin-span{
+  margin-right: 1.5rem;
+  
 }
 
 .hero-btn-L {
@@ -70,6 +86,18 @@
   font-size: 1.25rem;
   padding: 0px;
   margin: 0;
+}
+
+.footer{
+display: flex;
+
+align-items: center;
+justify-content: center;
+margin-top: auto;
+padding: 1rem;
+width: 100%;
+background: rgb(40, 44, 44);
+
 }
 
 

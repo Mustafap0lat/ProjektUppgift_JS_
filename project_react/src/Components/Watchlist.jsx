@@ -1,6 +1,10 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "./context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook'; 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 
 
 export const Watchlist = () => {
@@ -8,7 +12,7 @@ export const Watchlist = () => {
 
 
   return (
-    <div className="movie-page">
+    <div className="movie-page back-color">
       <div className="container">
         <div className="header">
           <h1 className="heading">My Watchlist</h1>
@@ -30,6 +34,12 @@ export const Watchlist = () => {
           <h2 className="no-movies">No movies in your list</h2>
         )}
       </div>
+      <footer className="footer1">
+        <span className="margin-span"><TwitterIcon /></span>
+        <span className="margin-span"><FacebookIcon /></span>
+        <span className="margin-span"><InstagramIcon /></span>
+        <span><PinterestIcon /></span>
+       </footer>
     </div>
   );
 };

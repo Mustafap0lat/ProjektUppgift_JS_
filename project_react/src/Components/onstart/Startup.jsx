@@ -1,7 +1,11 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook'; 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Startup.css";
-import { Link } from "react-router-dom";
 
 export default function Startup() {
   return (
@@ -29,6 +33,12 @@ export default function Startup() {
           </Link>
         </button>
       </div>
+      <footer className="footer">
+        <span className="margin-span"><TwitterIcon /></span>
+        <span className="margin-span"><FacebookIcon /></span>
+        <span className="margin-span"><InstagramIcon /></span>
+        <span><PinterestIcon /></span>
+       </footer>
     </div>
   );
 }
